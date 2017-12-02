@@ -14,7 +14,7 @@ public class FileUtils {
     private static final String STOPWORDS_DIRECTORY = "src/main/resources/stopwords/";
 
     /** @return all stories in dataset */
-    public static List<String> readAllParagraphs(String filename) {
+    public static List<String> readAllParagraphs (String filename) {
         List<String> paragraphs = new ArrayList<>();
         try {
             paragraphs = Files.readAllLines(Paths.get(DATASET_DIRECTORY.concat(filename)), Charset.defaultCharset());
@@ -23,7 +23,7 @@ public class FileUtils {
     }
 
     /** @return N-th stories in dataset */
-    public static String readNthParagraph(String filename, int n) {
+    public static String readNthParagraph (String filename, int n) {
         String paragraph = "";
         BufferedReader reader = bufferReader(filename);
         try {
@@ -34,7 +34,7 @@ public class FileUtils {
     }
 
     /** @return first stories in dataset */
-    public static String readFirstParagraph(String filename) { return readNthParagraph(filename, 1); }
+    public static String readFirstParagraph (String filename) { return readNthParagraph(filename, 1); }
 
     /** load different version of stop words list */
     public static List<String> readSmallStopWords () { return readStopWords("stopwordslist_173.txt"); }

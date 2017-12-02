@@ -10,12 +10,12 @@ public class POSTagPhrase {
         this.tag = tag;
     }
 
-    @Override public String toString() { return word.concat("/").concat(tag); }
+    @Override public String toString () { return word.concat("/").concat(tag); }
 
     /** Getters and Setters */
-    public String getWord() { return word; }
-    public void setWord(String word) { this.word = word; }
+    public String getWord () { return word; }
+    public void setWord (String word) { this.word = word; }
 
-    public String getTag() { return tag; }
-    public void setTag(String tag) { this.tag = tag; }
+    public String getTag () { return tag; }
+    public void setTag (String tag) { this.tag = tag; }
 }

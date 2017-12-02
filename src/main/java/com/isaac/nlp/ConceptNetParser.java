@@ -23,7 +23,7 @@ public class ConceptNetParser {
     private final Pattern enPattern;
     private final JsonParser jsonParser;
 
-    public ConceptNetParser() {
+    public ConceptNetParser () {
         this.headUrl = "http://api.conceptnet.io/c/en/";
         this.jsonParser = new JsonParser();
         this.enPattern = Pattern.compile("/a/\\[/r/(.*?)/.*?,/c/en/(.*?)/.*?,/c/en/(.*?)/.*?]");

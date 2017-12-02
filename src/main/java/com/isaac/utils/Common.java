@@ -25,7 +25,7 @@ public class Common {
     private static InputStream modelIn;
     private static final SentenceDetectorME sentenceTokenizer = initializeOpenNLPSentenceDetector();
 
-    public static List<String> sentenceTokenize(String paragraph) {
+    public static List<String> sentenceTokenize (String paragraph) {
         return Arrays.asList(sentenceTokenizer.sentDetect(paragraph));
     }
 
@@ -33,7 +33,7 @@ public class Common {
     public static <T> List<T> seq2List (Seq<T> sequence) { return JavaConversions.seqAsJavaList(sequence); }
 
     /** @return word level {@link TokenizerME} of OpenNLP */
-    public static TokenizerME initializeOpenNLPTokenizer() {
+    public static TokenizerME initializeOpenNLPTokenizer () {
         TokenizerModel model = null;
         try {
             modelIn = new FileInputStream(directory.concat("en-token.bin"));
@@ -45,7 +45,7 @@ public class Common {
     }
 
     /** @return {@link ChunkerME} of OpenNLP */
-    public static ChunkerME initializeOpenNLPChunker() {
+    public static ChunkerME initializeOpenNLPChunker () {
         ChunkerModel model =null;
         try {
             modelIn = new FileInputStream(directory.concat("en-chunker.bin"));
@@ -57,7 +57,7 @@ public class Common {
     }
 
     /** @return {@link POSTaggerME} of OpenNLP */
-    public static POSTaggerME initializeOpenNLPPOSTagger() {
+    public static POSTaggerME initializeOpenNLPPOSTagger () {
         POSModel model = null;
         try {
             modelIn = new FileInputStream(directory.concat("en-pos-maxent.bin"));
@@ -69,7 +69,7 @@ public class Common {
     }
 
     /** @return sentence level tokenizer, {@link SentenceDetectorME} */
-    private static SentenceDetectorME initializeOpenNLPSentenceDetector() {
+    private static SentenceDetectorME initializeOpenNLPSentenceDetector () {
         SentenceModel model = null;
         try {
             modelIn = new FileInputStream(directory.concat("en-sent.bin"));
@@ -81,22 +81,22 @@ public class Common {
     }
 
     /** @return person entity detector, {@link NameFinderME} */
-    public static NameFinderME initializeOpenNLPPersonDetector() { return initializeOpenNLPDetector("en-ner-person.bin"); }
+    public static NameFinderME initializeOpenNLPPersonDetector () { return initializeOpenNLPDetector("en-ner-person.bin"); }
 
     /** @return location entity detector, {@link NameFinderME} */
-    public static NameFinderME initializeOpenNLPLocationDetector() { return initializeOpenNLPDetector("en-ner-location.bin"); }
+    public static NameFinderME initializeOpenNLPLocationDetector () { return initializeOpenNLPDetector("en-ner-location.bin"); }
 
     /** @return date entity detector, {@link NameFinderME} */
-    public static NameFinderME initializeOpenNLPDateDetector() { return initializeOpenNLPDetector("en-ner-date.bin"); }
+    public static NameFinderME initializeOpenNLPDateDetector () { return initializeOpenNLPDetector("en-ner-date.bin"); }
 
     /** @return time entity detector, {@link NameFinderME} */
-    public static NameFinderME initializeOpenNLPTimeDetector() { return initializeOpenNLPDetector("en-ner-time.bin"); }
+    public static NameFinderME initializeOpenNLPTimeDetector () { return initializeOpenNLPDetector("en-ner-time.bin"); }
 
     /** @return organization entity detector, {@link NameFinderME} */
-    public static NameFinderME initializeOpenNLPOrganizationDetector() { return initializeOpenNLPDetector("en-ner-organization.bin"); }
+    public static NameFinderME initializeOpenNLPOrganizationDetector () { return initializeOpenNLPDetector("en-ner-organization.bin"); }
 
     /** @return name entity detector */
-    private static NameFinderME initializeOpenNLPDetector(String modelName) {
+    private static NameFinderME initializeOpenNLPDetector (String modelName) {
         TokenNameFinderModel model = null;
         try {
             modelIn = new FileInputStream(directory.concat(modelName));

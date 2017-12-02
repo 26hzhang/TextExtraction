@@ -53,7 +53,7 @@ public class OpenNLPParser {
     }
 
     /** Sentence Segmentation */
-    public List<String> sentenceTokenize(String paragraph) { return Common.sentenceTokenize(paragraph); }
+    public List<String> sentenceTokenize (String paragraph) { return Common.sentenceTokenize(paragraph); }
 
     /** Word Level Tokenization */
     public List<String> tokenize (String sentence) { return Arrays.asList(tokenizer.tokenize(sentence)); }
@@ -62,9 +62,9 @@ public class OpenNLPParser {
     public List<String> tag (String sentence) { return Arrays.asList(posTagger.tag(tokenizer.tokenize(sentence))); }
 
     /** Chunker */
-    public String[] chunk (String sentence) {
+    public List<String> chunk (String sentence) {
         String[] tokens = tokenizer.tokenize(sentence);
-        return chunker.chunk(tokens, posTagger.tag(tokens));
+        return Arrays.asList(chunker.chunk(tokens, posTagger.tag(tokens)));
     }
 
     /** Convert chunked results to specific phrases */
@@ -112,18 +112,20 @@ public class OpenNLPParser {
             case PERSON: spans = personDetector.find(tokens); break;
             case LOCATION: spans = locationDetector.find(tokens); break;
             case ORGANIZATION: spans = organizationDetector.find(tokens); break;
+            case MONEY:
+            case PERCENT:
             default: throw new UnsupportedOperationException("Not Implemented...");
         }
         return Arrays.asList(Span.spansToStrings(spans, tokens));
     }
 
     /** Getters */
-    public NameFinderME getPersonDetector() { return personDetector; }
-    public NameFinderME getLocationDetector() { return locationDetector; }
-    public NameFinderME getDateDetector() { return dateDetector; }
-    public NameFinderME getTimeDetector() { return timeDetector; }
-    public NameFinderME getOrganizationDetector() { return organizationDetector; }
-    public TokenizerME getTokenizer() { return tokenizer; }
-    public POSTaggerME getPosTagger() { return posTagger; }
-    public ChunkerME getChunker() { return chunker; }
+    public NameFinderME getPersonDetector () { return personDetector; }
+    public NameFinderME getLocationDetector () { return locationDetector; }
+    public NameFinderME getDateDetector () { return dateDetector; }
+    public NameFinderME getTimeDetector () { return timeDetector; }
+    public NameFinderME getOrganizationDetector () { return organizationDetector; }
+    public TokenizerME getTokenizer () { return tokenizer; }
+    public POSTaggerME getPosTagger () { return posTagger; }
+    public ChunkerME getChunker () { return chunker; }
 }

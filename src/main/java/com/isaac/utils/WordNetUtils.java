@@ -9,14 +9,12 @@ import java.net.URL;
 
 @SuppressWarnings("unused")
 public class WordNetUtils {
-    /** resources directory path */
-    private static final String GLOBALPATH = "src/main/resources/";
 
     /** Initialize IDictionary */
     private static final IDictionary wndict;
     static {
         URL wnUrl = null;
-        try { wnUrl = new URL("file", null, GLOBALPATH.concat("wn-dict3.1"));
+        try { wnUrl = new URL("file", null, "src/main/resources/wn-dict3.1");
         } catch (IOException e) { e.printStackTrace(); }
         assert wnUrl != null;
         wndict = new Dictionary(wnUrl);

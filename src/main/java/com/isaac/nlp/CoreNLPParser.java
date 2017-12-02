@@ -151,9 +151,9 @@ public class CoreNLPParser {
     public List<List<CoreLabel>> detectNER2CoreLabel (String sentence) { return nerDetector.classify(sentence); }
 
     /** Getter and Setter */
-    public StanfordCoreNLP getPipeline() { return pipeline; }
-    public void setPipeline(StanfordCoreNLP pipeline) { this.pipeline = pipeline; }
-    public void setPipeline(Properties props) { this.pipeline = new StanfordCoreNLP(props); }
+    public StanfordCoreNLP getPipeline () { return pipeline; }
+    public void setPipeline (StanfordCoreNLP pipeline) { this.pipeline = pipeline; }
+    public void setPipeline (Properties props) { this.pipeline = new StanfordCoreNLP(props); }
     public void setNerDetector (String modelType) {
         String modelName;
         switch (modelType) {

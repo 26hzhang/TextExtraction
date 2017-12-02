@@ -36,10 +36,10 @@ public class ArgumentPhrase {
     }
 
     /** Getters */
-    public Double getConfidence() { return confidence; }
-    public String getArgument1() { return argument1; }
-    public String getRelation() { return relation; }
-    public List<Argument2> getArgument2s() { return argument2s; }
+    public Double getConfidence () { return confidence; }
+    public String getArgument1 () { return argument1; }
+    public String getRelation () { return relation; }
+    public List<Argument2> getArgument2s () { return argument2s; }
 
     @SuppressWarnings("all")
     public class Argument2 {
@@ -51,14 +51,14 @@ public class ArgumentPhrase {
             this.argumentType = argumentType;
         }
 
-        @Override public String toString() { return argument2.concat(" (").concat(argumentType).concat(")"); }
+        @Override public String toString () { return argument2.concat(" (").concat(argumentType).concat(")"); }
 
         /** Getters */
-        public String getArgument2() { return argument2; }
-        public String getArgumentType() { return argumentType; }
+        public String getArgument2 () { return argument2; }
+        public String getArgumentType () { return argumentType; }
 
         /** Setters */
-        public void setArgument2(String argument2) { this.argument2 = argument2; }
-        public void setArgumentType(String argumentType) { this.argumentType = argumentType; }
+        public void setArgument2 (String argument2) { this.argument2 = argument2; }
+        public void setArgumentType (String argumentType) { this.argumentType = argumentType; }
     }
 }

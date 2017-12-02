@@ -51,7 +51,7 @@ public class OpenIEParser {
 
     public List<POSTagPhrase> getPosTagPhrases (String sentence) {
         return posTag(sentence).stream().map(PostaggedToken::toString).map(s ->
-                new POSTagPhrase(s.substring(0, s.lastIndexOf("/")), s.substring(s.lastIndexOf("/"),
+                new POSTagPhrase(s.substring(0, s.lastIndexOf("/")), s.substring(s.lastIndexOf("/") + 1,
                         s.lastIndexOf("@"))))
                 .collect(Collectors.toList());
     }
@@ -63,7 +63,7 @@ public class OpenIEParser {
         return chunk(sentence).stream().map(ChunkedToken::chunk).collect(Collectors.toList());
     }
 
-    public List<ChunkedPhrase> getChunkedPhrases(String sentence) {
+    public List<ChunkedPhrase> getChunkedPhrases (String sentence) {
         List<String> tokens = tokenize2String(sentence);
         List<String> chunkedTokens = chunk2String(sentence);
         List<ChunkedPhrase> phrases = new ArrayList<>();
@@ -92,17 +92,17 @@ public class OpenIEParser {
         return phrases;
     }
 
-    public List<ArgumentPhrase> extractUseTriples(String sentence) {
+    public List<ArgumentPhrase> extractUseTriples (String sentence) {
         return extract2InstanceUseTriples(sentence).stream().map(ArgumentPhrase::new).collect(Collectors.toList());
     }
 
-    public List<ArgumentPhrase> extract(String sentence) {
+    public List<ArgumentPhrase> extract (String sentence) {
         return extract2Instance(sentence).stream().map(ArgumentPhrase::new).collect(Collectors.toList());
     }
 
-    public List<Instance> extract2InstanceUseTriples(String sentence) { return extract2Instance(sentence, true); }
+    public List<Instance> extract2InstanceUseTriples (String sentence) { return extract2Instance(sentence, true); }
 
-    public List<Instance> extract2Instance(String sentence) { return extract2Instance(sentence, false); }
+    public List<Instance> extract2Instance (String sentence) { return extract2Instance(sentence, false); }
 
     /** @return a list of {@link Instance} extracted by OpenIE (argument1-relation-argument2s) */
     private List<Instance> extract2Instance (String sentence, boolean useTriples) {
@@ -110,5 +110,5 @@ public class OpenIEParser {
     }
 
     /** OpenIE Getter */
-    public OpenIE getOpenie() { return openie; }
+    public OpenIE getOpenie () { return openie; }
 }

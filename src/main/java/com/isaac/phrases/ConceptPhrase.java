@@ -26,7 +26,7 @@ public class ConceptPhrase {
         this.example = example;
     }
 
-    @Override public String toString() {
+    @Override public String toString () {
         String triple = "Triple: [".concat(entity1).concat(", ").concat(relation).concat(", ").concat(entity2).concat("]");
         String weiStr = "Weight: ".concat(String.format("%.4f", weight));
         String exaStr = "Example: ".concat(example);
@@ -34,9 +34,9 @@ public class ConceptPhrase {
     }
 
     /** Getters */
-    public String getEntity1() { return entity1; }
-    public String getRelation() { return relation; }
-    public String getEntity2() { return entity2; }
-    public Double getWeight() { return weight; }
-    public String getExample() { return example; }
+    public String getEntity1 () { return entity1; }
+    public String getRelation () { return relation; }
+    public String getEntity2 () { return entity2; }
+    public Double getWeight () { return weight; }
+    public String getExample () { return example; }
 }
