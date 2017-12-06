@@ -68,7 +68,7 @@ public class Common {
         return new POSTaggerME(model);
     }
 
-    /** @return sentence level tokenizer, {@link SentenceDetectorME} */
+    /** @return sentence level wordTokenizer, {@link SentenceDetectorME} */
     private static SentenceDetectorME initializeOpenNLPSentenceDetector () {
         SentenceModel model = null;
         try {

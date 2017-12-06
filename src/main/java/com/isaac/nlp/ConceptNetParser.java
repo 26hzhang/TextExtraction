@@ -56,7 +56,7 @@ public class ConceptNetParser {
 
     private JsonArray getTripleArray (String jsonString) {
         JsonObject conceptNetObj = jsonParser.parse(jsonString).getAsJsonObject();
-        return conceptNetObj.get("edges").getAsJsonArray(); // all information stores in "edges" tag
+        return conceptNetObj.get("edges").getAsJsonArray(); // all information stores in "edges" posTagger
     }
 
     public String getResponse (String phrase) {

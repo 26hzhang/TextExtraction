@@ -2,27 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a97f4f96-fa98-49ab-b4fb-926ebb958e20" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/isaac/example/openie/OpenIEExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/isaac/example/opennlp/OpenNLPExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenIEParser.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenIEParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenNLPParser$1.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenNLPParser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenNLPParser.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenNLPParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/isaac/utils/WordNetUtils.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/utils/WordNetUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/NameEntityRecogExample.class" afterPath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/NameEntityRecogExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/ConceptNetParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/ConceptNetParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenIEParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenIEParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenNLPParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenNLPParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/isaac/phrases/ArgumentPhrase.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/phrases/ArgumentPhrase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/isaac/phrases/ChunkedPhrase.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/phrases/ChunkedPhrase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/isaac/phrases/ConceptPhrase.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/phrases/ConceptPhrase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/isaac/phrases/POSTagPhrase.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/phrases/POSTagPhrase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/isaac/utils/Common.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/utils/Common.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/isaac/utils/FileUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/utils/FileUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/isaac/utils/WordNetUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/utils/WordNetUtils.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/zhanghao.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/experiment/QuestionToStatementTranslator.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/experiment/QuestionToStatementTranslator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/ling/NERType.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/ling/NERType.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/ConceptNetParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/ConceptNetParser.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenIEParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenIEParser.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/utils/Common.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/utils/Common.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/CorefExample.java" afterPath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/CorefExample.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/NameEntityRecogExample.java" afterPath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/NameEntityRecogExample.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/StanfordCoreNLPExample.java" afterPath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/StanfordCoreNLPExample.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/experiment/QuestionToStatementTranslator.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/experiment/QuestionToStatementTranslator.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/ling/NERType.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/ling/NERType.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/nlp/CoreNLPParser$1.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/nlp/CoreNLPParser$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/nlp/CoreNLPParser.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/nlp/CoreNLPParser.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenIEParser.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenIEParser.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenNLPParser.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenNLPParser.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/CorefExample.class" afterPath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/CorefExample.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/NameEntityRecogExample.class" afterPath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/NameEntityRecogExample.class" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/StanfordCoreNLPExample.class" afterPath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/StanfordCoreNLPExample.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,7 +34,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="253">
+                <caret line="105" column="26" lean-forward="false" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="26" />
+                <folding>
+                  <marker date="1512541625636" expanded="true" signature="3519:5362" ph="{...}" />
+                  <marker date="1512541625636" expanded="true" signature="4880:4978" ph="//..." />
+                  <marker date="1512541625636" expanded="true" signature="7436:8521" ph="{...}" />
+                  <marker date="1512541625636" expanded="true" signature="9321:10028" ph="{...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,11 +83,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/isaac/example/ConceptNetExample.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/isaac/example/CorefExample.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/CorefExample.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/isaac/ling/NERType.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/NameEntityRecogExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/isaac/utils/FileUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/isaac/nlp/ConceptNetParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/isaac/phrases/ArgumentPhrase.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/isaac/phrases/ChunkedPhrase.java" />
@@ -77,9 +92,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/isaac/utils/WordNetUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/isaac/utils/Common.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/isaac/example/openie/OpenIEExample.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenIEParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenNLPParser.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/isaac/example/opennlp/OpenNLPExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/isaac/ling/NERType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenIEParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/CorefExample.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/StanfordCoreNLPExample.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/NameEntityRecogExample.java" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -121,8 +141,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,6 +175,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="isaac" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TextExtraction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TextExtraction" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="isaac" type="462c0819:PsiDirectoryNode" />
+              <item name="ling" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TextExtraction" type="b2602c69:ProjectViewProjectNode" />
@@ -203,39 +232,12 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TextExtraction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TextExtraction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="isaac" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TextExtraction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TextExtraction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="isaac" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TextExtraction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TextExtraction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="isaac" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="openie" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,7 +274,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.OpenIEExample">
+  <component name="RunManager" selected="Application.NameEntityRecogExample">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
     <configuration name="ConceptNetExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -319,9 +327,9 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.isaac.example.corenlp.NameEntityRecogExample" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="-Xmx6g" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -368,12 +376,6 @@
       <module name="TextExtraction" />
       <envs />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -407,12 +409,6 @@
       </option>
       <envs />
       <patterns />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -448,6 +444,12 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.StanfordCoreNLPExample" />
       <item index="1" class="java.lang.String" itemvalue="Application.ConceptNetExample" />
@@ -457,11 +459,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.OpenIEExample" />
-        <item index="1" class="java.lang.String" itemvalue="Application.NameEntityRecogExample" />
+        <item index="0" class="java.lang.String" itemvalue="Application.NameEntityRecogExample" />
+        <item index="1" class="java.lang.String" itemvalue="Application.StanfordCoreNLPExample" />
         <item index="2" class="java.lang.String" itemvalue="Application.CorefExample" />
         <item index="3" class="java.lang.String" itemvalue="Application.ConceptNetExample" />
-        <item index="4" class="java.lang.String" itemvalue="Application.StanfordCoreNLPExample" />
+        <item index="4" class="java.lang.String" itemvalue="Application.OpenIEExample" />
       </list>
     </recent_temporary>
   </component>
@@ -472,6 +474,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -485,12 +490,22 @@
       <workItem from="1511958601371" duration="2729000" />
       <workItem from="1512018467397" duration="8965000" />
       <workItem from="1512040822721" duration="71000" />
-      <workItem from="1512192469593" duration="2415000" />
+      <workItem from="1512192469593" duration="2447000" />
+      <workItem from="1512370227653" duration="4300000" />
+      <workItem from="1512470968666" duration="12558000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1512207017983</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1512207017983</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18310000" />
+    <option name="totallyTimeSpent" value="35200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="22" width="1395" height="878" extended-state="0" />
@@ -501,28 +516,28 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.50258684" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32950193" sideWeight="0.49741316" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26459718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20694752" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,6 +545,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -541,7 +560,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#3117#3118#0" expanded="true" />
+            <element signature="e#3197#3198#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -550,9 +571,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
           <caret line="85" column="6" lean-forward="false" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -561,15 +580,8 @@
         <state relative-caret-position="570">
           <caret line="38" column="67" lean-forward="true" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#521#548#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dataset/paragraphs.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -584,78 +596,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/ling/Triple.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/ling/NERType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="62" lean-forward="false" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/experiment/QuestionToStatementTranslator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/NameEntityRecogExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="69" lean-forward="false" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-          <folding>
-            <element signature="e#221#248#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/StanfordCoreNLPExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2080">
-          <caret line="156" column="28" lean-forward="false" selection-start-line="156" selection-start-column="28" selection-end-line="156" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/nlp/ConceptNetParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -667,32 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/phrases/ConceptPhrase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/utils/Common.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="98" column="58" lean-forward="false" selection-start-line="98" selection-start-column="58" selection-end-line="98" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/utils/WordNetUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/phrases/ArgumentPhrase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -701,13 +624,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/isaac/example/openie/OpenIEExample.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/isaac/example/opennlp/OpenNLPExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="44" column="67" lean-forward="true" selection-start-line="44" selection-start-column="67" selection-end-line="44" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="103">
+          <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/ling/NERType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="68" lean-forward="false" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -719,12 +647,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/experiment/QuestionToStatementTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/isaac/example/openie/OpenIEExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="43" column="63" lean-forward="false" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenNLPParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="66" column="73" lean-forward="false" selection-start-line="66" selection-start-column="73" selection-end-line="66" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dataset/paragraphs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="893" column="13" lean-forward="true" selection-start-line="893" selection-start-column="0" selection-end-line="894" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenIEParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="1305">
+          <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/CorefExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="37" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="37" />
           <folding>
-            <element signature="e#660#687#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/StanfordCoreNLPExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-924">
+          <caret line="53" column="95" lean-forward="true" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3117#3118#0" expanded="true" />
+            <element signature="e#3197#3198#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -732,43 +728,64 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/isaac/example/ConceptNetExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="21" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/CorefExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/nlp/ConceptNetParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenNLPParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="66" column="73" lean-forward="false" selection-start-line="66" selection-start-column="73" selection-end-line="66" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/isaac/example/opennlp/OpenNLPExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+        <state relative-caret-position="-437">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#521#548#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/phrases/ConceptPhrase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/NameEntityRecogExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/utils/WordNetUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/utils/Common.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="98" column="58" lean-forward="false" selection-start-line="98" selection-start-column="58" selection-end-line="98" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="180">
-            <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-            <folding />
+          <first_editor relative-caret-position="253">
+            <caret line="105" column="26" lean-forward="false" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="26" />
+            <folding>
+              <marker date="1512541625636" expanded="true" signature="3519:5362" ph="{...}" />
+              <marker date="1512541625636" expanded="true" signature="4880:4978" ph="//..." />
+              <marker date="1512541625636" expanded="true" signature="7436:8521" ph="{...}" />
+              <marker date="1512541625636" expanded="true" signature="9321:10028" ph="{...}" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>

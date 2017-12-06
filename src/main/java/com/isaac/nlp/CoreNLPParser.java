@@ -2,6 +2,12 @@ package com.isaac.nlp;
 
 import com.isaac.ling.NERType;
 import com.isaac.phrases.POSTagPhrase;
+import edu.stanford.nlp.coref.CorefCoreAnnotations;
+import edu.stanford.nlp.coref.data.CorefChain;
+import edu.stanford.nlp.coref.data.CorefChain.CorefMention;
+import edu.stanford.nlp.coref.data.Dictionaries.Animacy;
+import edu.stanford.nlp.coref.data.Dictionaries.MentionType;
+import edu.stanford.nlp.coref.data.Mention;
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ie.crf.CRFClassifier;
 import edu.stanford.nlp.ling.CoreAnnotations;
@@ -10,6 +16,7 @@ import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.semgraph.SemanticGraph;
 import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations;
+import edu.stanford.nlp.semgraph.SemanticGraphEdge;
 import edu.stanford.nlp.util.CoreMap;
 import edu.stanford.nlp.util.Triple;
 
@@ -23,89 +30,173 @@ import java.util.stream.StreamSupport;
 
 @SuppressWarnings("unused")
 public class CoreNLPParser {
-    /** Models directory */
-    private final String directory = "edu/stanford/nlp/models/";
 
     private StanfordCoreNLP pipeline;
-    private AbstractSequenceClassifier<CoreLabel> nerDetector;
+    private AbstractSequenceClassifier<CoreLabel> nerDetector3Class;
+    private AbstractSequenceClassifier<CoreLabel> nerDetector4Class;
+    private AbstractSequenceClassifier<CoreLabel> nerDetector7Class;
+
+    private String sentences;
+    private Annotation annotation;
 
     public CoreNLPParser () {
+        String directory = "edu/stanford/nlp/models/"; // model directory
         Properties props = new Properties();
-        props.setProperty("annotators", "tokenize, ssplit, pos, lemma, depparse");
+        props.setProperty("annotators", "tokenize,ssplit,pos,lemma,ner,parse,mention,dcoref,natlog,openie");
         // english dependencies: english_SD.gz, universal dependencies: english_UD.gz
-        props.setProperty("depparse.model", directory.concat("parser/nndep/english_UD.gz"));
+        // props.setProperty("parse.model", directory.concat("parser/nndep/english_UD.gz"));
+        // props.setProperty("depparse.model", directory.concat("parser/nndep/english_UD.gz"));
         this.pipeline = new StanfordCoreNLP(props);
-        String nerModelPath = directory.concat("ner/english.muc.7class.distsim.crf.ser.gz");
-        this.nerDetector = CRFClassifier.getClassifierNoExceptions(nerModelPath);
+        String nerModelPath3Class = directory.concat("ner/english.all.3class.distsim.crf.ser.gz");
+        this.nerDetector3Class = CRFClassifier.getClassifierNoExceptions(nerModelPath3Class);
+        String nerModelPath4Class = directory.concat("ner/english.conll.4class.distsim.crf.ser.gz");
+        this.nerDetector4Class = CRFClassifier.getClassifierNoExceptions(nerModelPath4Class);
+        String nerModelPath7Class = directory.concat("ner/english.muc.7class.distsim.crf.ser.gz");
+        this.nerDetector7Class = CRFClassifier.getClassifierNoExceptions(nerModelPath7Class);
+    }
+
+    /** annotate sentence, apply stanford corenlp parser to given sentences */
+    public void annotate (String sentences) {
+        this.sentences = sentences;
+        annotation = new Annotation(sentences);
+        pipeline.annotate(annotation);
     }
 
     /** @return {@link List} of {@link CoreMap}, each {@link CoreMap} is a tokenized sentence from paragraph/text */
-    private List<CoreMap> sentenceAnnotate (String sentences) {
-        Annotation annotation = new Annotation(sentences);
-        pipeline.annotate(annotation);
+    private List<CoreMap> sentenceAnnotate () {
         return annotation.get(CoreAnnotations.SentencesAnnotation.class);
     }
 
-    /** @return {@link List} of tokenized sentences from paragraph/text */
-    public List<String> sentenceTokenize (String sentences) {
-        return sentenceAnnotate(sentences).stream().map(CoreMap::toString).collect(Collectors.toList());
+    /** @return {@link List} of {@link CoreLabel}, each {@link CoreLabel} is a tokenized word from sentence */
+    private List<List<CoreLabel>> wordAnnotate() {
+        return sentenceAnnotate().stream().map(e -> e.get(CoreAnnotations.TokensAnnotation.class)).collect(Collectors.toList());
     }
 
-    /** @return {@link List} of {@link CoreLabel}, each {@link CoreLabel} is a tokenized word from sentence */
-    public List<CoreLabel> wordTokenize (String sentence) {
-        return sentenceAnnotate(sentence).get(0).get(CoreAnnotations.TokensAnnotation.class);
+    /** @return {@link List} of tokenized sentences from paragraph/text */
+    public List<String> sentenceTokenizer() {
+        return sentenceAnnotate().stream().map(CoreMap::toString).collect(Collectors.toList());
     }
 
     /** @return {@link List} of tokenized words from sentence */
-    public List<String> tokenizer (String sentence) {
-        return wordTokenize(sentence).stream().map(CoreLabel::word).collect(Collectors.toList());
-    }
-
-    /** @return {@link List} of lemmatized words from sentence */
-    public List<String> lemmaTokenizer (String sentence) {
-        return wordTokenize(sentence).stream().map(CoreLabel::lemma).collect(Collectors.toList());
-    }
-
-    /** @return {@link List} of {@link POSTagPhrase} */
-    public List<POSTagPhrase> tag (String sentence) {
-        return wordTokenize(sentence).stream() // get word tokens
-                    .map(t -> new POSTagPhrase(t.word(), t.get(CoreAnnotations.PartOfSpeechAnnotation.class))) // get pos tags
-                    .collect(Collectors.toList()); // convert to list
-    }
-
-    /** @return tagged sentence */
-    public String tags2String (String sentence) {
-        return String.join(" ", tag(sentence).stream().map(POSTagPhrase::toString).collect(Collectors.toList()));
-    }
-
-    /** @return {@link List} of {@link Triple} contains dependency relations */
-    public List<Triple<String, String, String>> dependencyParse2Triple (String sentence) {
-        return StreamSupport.stream(dependencyParse(sentence).edgeIterable().spliterator(), false)
-                .map(edge -> Triple.makeTriple(edge.getSource().toString(), edge.getTarget().toString(),
-                        edge.getRelation().toString()))
+    public List<List<String>> wordTokenizer() {
+        return wordAnnotate().stream().map(e -> e.stream().map(CoreLabel::word).collect(Collectors.toList()))
                 .collect(Collectors.toList());
     }
 
-    /** @return {@link SemanticGraph} of a sentence */
-    public SemanticGraph dependencyParse (String sentence) {
+    /** @return {@link List} of lemmatized words from sentence */
+    public List<List<String>> lemmaTokenizer () {
+        return wordAnnotate().stream().map(e -> e.stream().map(CoreLabel::lemma).collect(Collectors.toList()))
+                .collect(Collectors.toList());
+    }
+
+    /** @return {@link List} of {@link POSTagPhrase} */
+    public List<List<POSTagPhrase>> posTagger() {
+        return wordAnnotate().stream().map(e ->
+                        e.stream().map(t -> new POSTagPhrase(t.word(), t.get(CoreAnnotations.PartOfSpeechAnnotation.class)))
+                        .collect(Collectors.toList())).collect(Collectors.toList());
+    }
+
+    /** @return tagged sentence */
+    public List<String> posTags2String () {
+        return posTagger().stream()
+                .map(e -> String.join(" ", e.stream().map(POSTagPhrase::toString).collect(Collectors.toList())))
+                .collect(Collectors.toList());
+    }
+
+    /*------------------------ Dependency Parser -----------------------*/
+    /** @return {@link SemanticGraph} */
+    public List<SemanticGraph> dependencyParse () {
         // SemanticGraphCoreAnnotations.BasicDependenciesAnnotation.class -- basic
+        // SemanticGraphCoreAnnotations.EnhancedDependenciesAnnotation.class -- enhanced
         // SemanticGraphCoreAnnotations.EnhancedPlusPlusDependenciesAnnotation.class -- enhanced++
-        return sentenceAnnotate(sentence).get(0).get(SemanticGraphCoreAnnotations.EnhancedDependenciesAnnotation.class);
+        return sentenceAnnotate().stream()
+                .map(e -> e.get(SemanticGraphCoreAnnotations.EnhancedDependenciesAnnotation.class))
+                .collect(Collectors.toList());
+    }
+
+    /** @return List of List of {@link SemanticGraphEdge} */
+    public List<List<SemanticGraphEdge>> dependencyParse2Edge () {
+        return dependencyParse().stream().map(e -> StreamSupport.stream(e.edgeIterable().spliterator(), false)
+                .collect(Collectors.toList())).collect(Collectors.toList());
+    }
+
+    /** @return {@link List} of {@link Triple} contains dependency relations */
+    public List<List<Triple<String, String, String>>> dependencyParse2Triple () {
+        return dependencyParse2Edge().stream()
+                .map(l -> l.stream()
+                        .map(e -> Triple.makeTriple(e.getSource().toString(), e.getTarget().toString(),
+                                e.getRelation().toString()))
+                        .collect(Collectors.toList()))
+                .collect(Collectors.toList());
     }
 
     /** @return semantic graph string */
-    public String dependencyParse2DotFormat (String sentence) { return dependencyParse(sentence).toDotFormat(); }
-    public String dependencyParse2String (String sentence) { return dependencyParse(sentence).toString(); }
+    public List<String> dependencyParse2DotFormat () {
+        return dependencyParse().stream().map(SemanticGraph::toDotFormat).collect(Collectors.toList());
+    }
+    public List<String> dependencyParse2String () {
+        return dependencyParse().stream().map(SemanticGraph::toString).collect(Collectors.toList());
+    }
+    /*------------------------------------------------------------------*/
 
+    /*--------------- Anaphora Resolution (Coreference) ----------------*/
+    /**
+     * The function is used to find all the coreference in given text. It returns a list of list of {@link CorefMention},
+     * each list of {@link CorefMention} is a list of related component in given text. Plus, the {@link CorefMention} contains
+     * much useful information:
+     *      CorefMention.animacy ({@link Animacy}) -- indicates if it is a animate argument (value: ANIMATE, INANIMATE)
+     *      CorefMention.sentNum ({@link Integer}) -- indicates which sentence the mention appears
+     *      CorefMention.headIndex ({@link Integer}) -- indicates the head word in this mention phrase in sentence
+     *      CorefMention.startIndex ({@link Integer}) -- indicates the start offset (include) of the mention phrase in sentence
+     *      CorefMention.endIndex ({@link Integer}) -- indicates the end offset (exclude) of the mention phrases in sentence
+     *      CorefMention.mentionSpan ({@link String}) -- the mention phrase
+     *      CorefMention.mentionType ({@link MentionType}) -- indicates the type of mention phrase
+     *                                                        (value: NOMINAL, PRONOMINAL, etc.)
+     *      CorefMention.mentionID ({@link Integer}) -- the id of mention phrase
+     *      CorefMention.corefClusterID ({@link Integer}) -- the chain id where the mention phrase in
+     * @return a list of coreference chains (each chain is a list of coreference mentions ({@link CorefMention}))
+     */
+    public List<List<CorefMention>> corefChains () {
+        return annotation.get(CorefCoreAnnotations.CorefChainAnnotation.class).values().stream()
+                .map(CorefChain::getMentionsInTextualOrder).collect(Collectors.toList());
+    }
+
+    public String corefMention2String (CorefMention m) {
+        return "Phrase: " + m.mentionSpan + ", " +
+                "sentNum: " + m.sentNum + ", " +
+                "headIndex: " + m.headIndex + ", " +
+                "start: " + m.startIndex + ", " +
+                "end: " + m.endIndex + ", " +
+                "Animacy: " + m.animacy.toString() + ", " +
+                "mentionType: " + m.mentionType.toString() + ", " +
+                "mentionId: " + m.mentionID + ", " +
+                "clusterId: " + m.corefClusterID;
+    }
+
+    /** convert corefChains to String */
+    public List<String> corefChains2String () {
+        return annotation.get(CorefCoreAnnotations.CorefChainAnnotation.class).values().stream()
+                .map(CorefChain::toString).collect(Collectors.toList());
+    }
+
+    /** @return list of list of {@link Mention} */
+    public List<List<Mention>> mentions () {
+        return sentenceAnnotate().stream().map(e -> e.get(CorefCoreAnnotations.CorefMentionsAnnotation.class))
+                .collect(Collectors.toList());
+    }
+    /*------------------------------------------------------------------*/
+
+    /*-------------------- Named Entity Recognition --------------------*/
     /** @return {@link List} of specific entities */
-    public List<String> findPerson (String sentence) { return findSpecialEntity(sentence, NERType.PERSON); }
-    public List<String> findLocation (String sentence) { return findSpecialEntity(sentence, NERType.LOCATION); }
-    public List<String> findOrganization (String sentence) { return findSpecialEntity(sentence, NERType.ORGANIZATION); }
-    public List<String> findMoney (String sentence) { return findSpecialEntity(sentence, NERType.MONEY); }
-    public List<String> findPercent (String sentence) { return findSpecialEntity(sentence, NERType.PERCENT); }
-    public List<String> findTime (String sentence) { return findSpecialEntity(sentence, NERType.TIME); }
-    public List<String> findDate (String sentence) { return findSpecialEntity(sentence, NERType.DATE); }
-    private List<String> findSpecialEntity (String sentence, NERType type) {
+    public List<String> findPerson () { return findSpecialEntity(NERType.PERSON); }
+    public List<String> findLocation () { return findSpecialEntity(NERType.LOCATION); }
+    public List<String> findOrganization () { return findSpecialEntity(NERType.ORGANIZATION); }
+    public List<String> findMoney () { return findSpecialEntity(NERType.MONEY); }
+    public List<String> findPercent () { return findSpecialEntity(NERType.PERCENT); }
+    public List<String> findTime () { return findSpecialEntity(NERType.TIME); }
+    public List<String> findDate () { return findSpecialEntity(NERType.DATE); }
+    public List<String> findMISC () { return findSpecialEntity(NERType.MISC); }
+    private List<String> findSpecialEntity (NERType type) {
         Pattern pattern;
         switch (type) {
             case TIME: pattern = Pattern.compile("<TIME>(.+?)</TIME>"); break;
@@ -115,9 +206,10 @@ public class CoreNLPParser {
             case ORGANIZATION: pattern = Pattern.compile("<ORGANIZATION>(.+?)</ORGANIZATION>"); break;
             case MONEY: pattern = Pattern.compile("<MONEY>(.+?)</MONEY>"); break;
             case PERCENT: pattern = Pattern.compile("<PERCENT>(.+?)</PERCENT>"); break;
+            case MISC: pattern = Pattern.compile("<MISC>(.+?)</MISC>"); break;
             default: throw new UnsupportedOperationException("Not Implemented");
         }
-        String markedSent = detectNERInlineXML(sentence);
+        String markedSent = detectNERInlineXML();
         Matcher m = pattern.matcher(markedSent);
         List<String> entities = new ArrayList<>();
         while (m.find()) entities.add(m.group(1));
@@ -125,43 +217,65 @@ public class CoreNLPParser {
     }
 
     /** @return a string which marked the specific entity inline */
-    public String detectNERInlineXML(String sentence) { return nerDetector.classifyWithInlineXML(sentence); }
+    public String detectNERInlineXML() {
+        String class3 = detectNERInlineXML(nerDetector3Class); // get person
+        String class4 = detectNERInlineXML(nerDetector4Class); // special: MISC
+        String class7 = detectNERInlineXML(nerDetector7Class); // class7 lost person info, append from class3
+        // append person
+        Matcher personM = Pattern.compile("<PERSON>(.+?)</PERSON>").matcher(class3);
+        while (personM.find()) {
+            String person = personM.group(1);
+            class7 = class7.replace(person, "<PERSON>".concat(person).concat("</PERSON>"));
+        }
+        // append MISC
+        Matcher miscM = Pattern.compile("<MISC>(.+?)</MISC>").matcher(class4);
+        while (miscM.find()) {
+            String misc = miscM.group(1);
+            class7 = class7.replace(misc, "<MISC>".concat(misc).concat("</MISC>"));
+        }
+        return class7;
+    }
 
     /** @return a string which detected the specific entity in different format */
-    public String detectNER2String (String sentence) { return nerDetector.classifyToString(sentence); }
-    public String detectNER2XMLString (String sentence) {
-        return nerDetector.classifyToString(sentence,
-                "xml", true);
+    public String detectNERInlineXML(AbstractSequenceClassifier<CoreLabel> nerDetector) {
+        return nerDetector.classifyWithInlineXML(sentences);
     }
-    public String detectNER2TSVString (String sentence) {
-        return nerDetector.classifyToString(sentence,
-                "tsv", false);
-    }
-    public String detectNER2TabledEntity (String sentence) { return nerDetector.classifyToString(sentence,
-            "tabbedEntities", false); }
-    public String detectNER2SlashTags (String sentence) { return nerDetector.classifyToString(sentence,
-            "slashTags", false); }
 
+    /*public String detectNER2String (AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
+        return nerDetector.classifyToString(sentences);
+    }
+    public String detectNER2XMLString (AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
+        return nerDetector.classifyToString(sentence, "xml", true);
+    }
+    public String detectNER2TSVString (AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
+        return nerDetector.classifyToString(sentence, "tsv", false);
+    }
+    public String detectNER2TabledEntity (AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
+        return nerDetector.classifyToString(sentence, "tabbedEntities", false);
+    }
+    public String detectNER2SlashTags (AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
+        return nerDetector.classifyToString(sentence, "slashTags", false);
+    }
     /** @return {@link List} of {@link Triple}, detect specific entities */
-    public List<Triple<String, Integer, Integer>> detectNER2CharacterOffsets (String sentence) {
+    /*public List<Triple<String, Integer, Integer>> detectNER2CharacterOffsets (
+                                    AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
         return nerDetector.classifyToCharacterOffsets(sentence);
     }
-
     /** detect specific entity to core label lists */
-    public List<List<CoreLabel>> detectNER2CoreLabel (String sentence) { return nerDetector.classify(sentence); }
+    /*public List<List<CoreLabel>> detectNER2CoreLabel (AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
+        return nerDetector.classify(sentence);
+    }*/
+    /*------------------------------------------------------------------*/
 
-    /** Getter and Setter */
+    /*----------------------- Getters and Setters ----------------------*/
+    /** Getters */
     public StanfordCoreNLP getPipeline () { return pipeline; }
+    public AbstractSequenceClassifier<CoreLabel> getNerDetector3Class() { return nerDetector3Class; }
+    public AbstractSequenceClassifier<CoreLabel> getNerDetector4Class() { return nerDetector4Class; }
+    public AbstractSequenceClassifier<CoreLabel> getNerDetector7Class() { return nerDetector7Class; }
+
+    /** Setters */
     public void setPipeline (StanfordCoreNLP pipeline) { this.pipeline = pipeline; }
     public void setPipeline (Properties props) { this.pipeline = new StanfordCoreNLP(props); }
-    public void setNerDetector (String modelType) {
-        String modelName;
-        switch (modelType) {
-            case "all": modelName = "ner/english.all.3class.distsim.crf.ser.gz"; break;
-            case "conll": modelName = "ner/english.conll.4class.distsim.crf.ser.gz"; break;
-            case "muc": modelName = "ner/english.muc.7class.distsim.crf.ser.gz"; break;
-            default: throw new UnsupportedOperationException("Unknown Element");
-        }
-        this.nerDetector = CRFClassifier.getClassifierNoExceptions(directory.concat(modelName));
-    }
+    /*------------------------------------------------------------------*/
 }

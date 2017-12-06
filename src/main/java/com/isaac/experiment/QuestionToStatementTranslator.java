@@ -185,13 +185,13 @@ public class QuestionToStatementTranslator {
      * The pattern for "what is ..." sentences.
      */
     private final TokenSequencePattern triggerWhatIs = TokenSequencePattern.compile(
-            "[{lemma:/what|which/; tag:/W.*/}] " +
-                    "(?$answer_type [tag:/N.*/]+)? " +
+            "[{lemma:/what|which/; posTagger:/W.*/}] " +
+                    "(?$answer_type [posTagger:/N.*/]+)? " +
                     "(?$be [{lemma:be}] )" +
-                    "(?: /the/ (?$answer_type [word:/name/]) [tag:/[PW].*/])? " +
+                    "(?: /the/ (?$answer_type [word:/name/]) [posTagger:/[PW].*/])? " +
                     "(?$statement_body []+?) " +
-                    "(?$prep_num [!{tag:IN}] [tag:CD] )? " +
-                    "(?$suffix [tag:/[RI].*/] )? " +
+                    "(?$prep_num [!{posTagger:IN}] [posTagger:CD] )? " +
+                    "(?$suffix [posTagger:/[RI].*/] )? " +
                     "(?$punct [word:/[?\\.!]/])");
 
     /**
@@ -331,9 +331,9 @@ public class QuestionToStatementTranslator {
      * The pattern for "what/which NN is ..." sentences.
      */
     private final TokenSequencePattern triggerWhNNIs = TokenSequencePattern.compile(
-            "[{lemma:/what|which/; tag:/W.*/}] " +
+            "[{lemma:/what|which/; posTagger:/W.*/}] " +
                     "(?$answer_type [!{lemma:be} & !{pos:\"PRP$\"} | {word:i}]+) " +
-                    "(?$be [{lemma:be}] [{tag:/[VRIJ].*/}] ) " +
+                    "(?$be [{lemma:be}] [{posTagger:/[VRIJ].*/}] ) " +
                     "(?$statement_body []+?) " +
                     "(?$punct [word:/[?\\.!]/])");
 
@@ -359,11 +359,11 @@ public class QuestionToStatementTranslator {
      * The pattern for "what/which NN have ..." sentences.
      */
     private final TokenSequencePattern triggerWhNNHave = TokenSequencePattern.compile(
-            "[{lemma:/what|which/; tag:/W.*/}] " +
-                    "(?$answer_type [!{tag:/V.*/}]+) " +
+            "[{lemma:/what|which/; posTagger:/W.*/}] " +
+                    "(?$answer_type [!{posTagger:/V.*/}]+) " +
                     "(?$have [{lemma:have} | {lemma:do} | {lemma:be}] ) " +
-                    "(?$pre_verb [!{tag:/V.*/}]+ ) " +
-                    "(?$verb [{tag:/V.*/}] [{tag:IN}]? ) " +
+                    "(?$pre_verb [!{posTagger:/V.*/}]+ ) " +
+                    "(?$verb [{posTagger:/V.*/}] [{posTagger:IN}]? ) " +
                     "(?$post_verb []+ )? " +
                     "(?$punct [word:/[?\\.!]/])");
 
@@ -431,10 +431,10 @@ public class QuestionToStatementTranslator {
      * The pattern for "what/which NN have NN ..." sentences.
      */
     private final TokenSequencePattern triggerWhNNHaveNN = TokenSequencePattern.compile(
-            "[{lemma:/what|which/; tag:/W.*/}] " +
-                    "(?$answer_type [tag:/N.*/]+) " +
+            "[{lemma:/what|which/; posTagger:/W.*/}] " +
+                    "(?$answer_type [posTagger:/N.*/]+) " +
                     "(?$have [{lemma:have}] ) " +
-                    "(?$statement_body [!{tag:/V.*/}]+?) " +
+                    "(?$statement_body [!{posTagger:/V.*/}]+?) " +
                     "(?$punct [word:/[?\\.!]/])");
 
     /**
@@ -459,13 +459,13 @@ public class QuestionToStatementTranslator {
      * The pattern for "what is there ..." sentences.
      */
     private final TokenSequencePattern triggerWhatIsThere = TokenSequencePattern.compile(
-            "[{lemma:/what|which/; tag:/W.*/}] " +
-                    "(?$answer_type [tag:/N.*/]+)? " +
+            "[{lemma:/what|which/; posTagger:/W.*/}] " +
+                    "(?$answer_type [posTagger:/N.*/]+)? " +
                     "(?$be [{lemma:be}] )" +
-                    "(?$there [{lemma:there; tag:RB}] ) " +
-                    "(?$adjmod [{tag:/[JN].*/}] )? " +
-                    "(?$to_verb [{tag:TO}] [{tag:/V.*/}] )? " +
-                    "(?$statement_body [{tag:IN}] []+?) " +
+                    "(?$there [{lemma:there; posTagger:RB}] ) " +
+                    "(?$adjmod [{posTagger:/[JN].*/}] )? " +
+                    "(?$to_verb [{posTagger:TO}] [{posTagger:/V.*/}] )? " +
+                    "(?$statement_body [{posTagger:IN}] []+?) " +
                     "(?$punct [word:/[?\\.!]/])");
 
     /**
@@ -503,11 +503,11 @@ public class QuestionToStatementTranslator {
      * The pattern for "where do..."  sentences.
      */
     private final TokenSequencePattern triggerWhereDo = TokenSequencePattern.compile(
-            "[{lemma:where; tag:/W.*/}] " +
+            "[{lemma:where; posTagger:/W.*/}] " +
                     "(?$do [ {lemma:/do/} ]) " +
                     "(?$statement_body []+?) " +
-                    "(?$at [tag:/[IT].*/] )? " +
-                    "(?$loc [tag:/N.*/] )*? " +
+                    "(?$at [posTagger:/[IT].*/] )? " +
+                    "(?$loc [posTagger:/N.*/] )*? " +
                     "(?$punct [word:/[?\\.!]/])" );
 
     /**
@@ -571,13 +571,13 @@ public class QuestionToStatementTranslator {
      * The pattern for "where is..."  sentences.
      */
     private final TokenSequencePattern triggerWhereIs = TokenSequencePattern.compile(
-            "[{lemma:where; tag:/W.*/}] " +
+            "[{lemma:where; posTagger:/W.*/}] " +
                     "(?$be [ {lemma:/be/} ]) " +
-                    "(?$initial_verb [tag:/[VJ].*/] )? " +
+                    "(?$initial_verb [posTagger:/[VJ].*/] )? " +
                     "(?$statement_body []+?) " +
-                    "(?$ignored [lemma:locate] [tag:IN] [word:a]? [word:map]? )? " +
-                    "(?$final_verb [tag:/[VJ].*/] )? " +
-                    "(?$at [tag:IN] )? " +
+                    "(?$ignored [lemma:locate] [posTagger:IN] [word:a]? [word:map]? )? " +
+                    "(?$final_verb [posTagger:/[VJ].*/] )? " +
+                    "(?$at [posTagger:IN] )? " +
                     "(?$punct [word:/[?\\.!]/])" );
 
     /**
@@ -627,14 +627,14 @@ public class QuestionToStatementTranslator {
      * The pattern for "who is..."  sentences.
      */
     private final TokenSequencePattern triggerWhoIs = TokenSequencePattern.compile(
-            "[{lemma:who; tag:/W.*/}] " +
+            "[{lemma:who; posTagger:/W.*/}] " +
                     "(?$be [ {lemma:/be/} ] ) " +
-                    "(?$prep [ {tag:/IN|V.*/} ] )? " +
+                    "(?$prep [ {posTagger:/IN|V.*/} ] )? " +
                     "(?$statement_body []+?) " +
-                    "(?$final_verb [tag:/V.*/] [tag:/[IRT].*/] )? " +
-                    "(?$final_verb [tag:VBG] )? " +
-                    "(?$now [tag:RB] )? " +
-                    "(?$prep_num [!{tag:IN}] [tag:CD] )? " +
+                    "(?$final_verb [posTagger:/V.*/] [posTagger:/[IRT].*/] )? " +
+                    "(?$final_verb [posTagger:VBG] )? " +
+                    "(?$now [posTagger:RB] )? " +
+                    "(?$prep_num [!{posTagger:IN}] [posTagger:CD] )? " +
                     "(?$punct [word:/[?\\.!]/])" );
 
     /**
@@ -727,10 +727,10 @@ public class QuestionToStatementTranslator {
      * The pattern for "who did..."  sentences.
      */
     private final TokenSequencePattern triggerWhoDid = TokenSequencePattern.compile(
-            "[{lemma:who; tag:/W.*/}] " +
+            "[{lemma:who; posTagger:/W.*/}] " +
                     "(?$do [ {lemma:/do/} ] ) " +
                     "(?$statement_body []+?) " +
-                    "(?$now [tag:RB] )? " +
+                    "(?$now [posTagger:RB] )? " +
                     "(?$punct [word:/[?\\.!]/])" );
 
     /**
@@ -792,11 +792,11 @@ public class QuestionToStatementTranslator {
      * The pattern for "what do..."  sentences.
      */
     private final TokenSequencePattern triggerWhatDo = TokenSequencePattern.compile(
-            "[{lemma:/what|which/; tag:/W.*/}] " +
+            "[{lemma:/what|which/; posTagger:/W.*/}] " +
                     "(?$do [ {lemma:/do/} ]) " +
-                    "(?$pre_do [ !{lemma:do} & !{tag:IN} ]+) " +
+                    "(?$pre_do [ !{lemma:do} & !{posTagger:IN} ]+) " +
                     "(?$mid_do [ {lemma:do} ] )? " +
-                    "(?$in [ {tag:IN} ] )? " +
+                    "(?$in [ {posTagger:IN} ] )? " +
                     "(?$post_do []+ )? " +
                     "(?$punct [word:/[?\\.!]/])" );
 
@@ -863,10 +863,10 @@ public class QuestionToStatementTranslator {
      * The pattern for "when do..."  sentences.
      */
     private final TokenSequencePattern triggerWhenDo = TokenSequencePattern.compile(
-            "[{lemma:when; tag:/W.*/}] " +
+            "[{lemma:when; posTagger:/W.*/}] " +
                     "(?$do [ {lemma:/do/} ]) " +
                     "(?$statement_body []+?) " +
-                    "(?$in [tag:/[IT].*/] )? " +
+                    "(?$in [posTagger:/[IT].*/] )? " +
                     "(?$punct [word:/[?\\.!]/])" );
 
     /**
@@ -901,10 +901,10 @@ public class QuestionToStatementTranslator {
      * The pattern for "what have..."  sentences.
      */
     private final TokenSequencePattern triggerWhatHave = TokenSequencePattern.compile(
-            "[{lemma:what; tag:/W.*/}] " +
+            "[{lemma:what; posTagger:/W.*/}] " +
                     "(?$have [ {lemma:/have/} ]) " +
-                    "(?$pre_verb [!{tag:/V.*/}]+ )? " +
-                    "(?$verb [tag:/V.*/] [tag:IN]? ) " +
+                    "(?$pre_verb [!{posTagger:/V.*/}]+ )? " +
+                    "(?$verb [posTagger:/V.*/] [posTagger:IN]? ) " +
                     "(?$post_verb []+ )? " +
                     "(?$punct [word:/[?\\.!]/])" );
 
@@ -950,9 +950,9 @@ public class QuestionToStatementTranslator {
      * The pattern for "when do..."  sentences.
      */
     private final TokenSequencePattern triggerHow = TokenSequencePattern.compile(
-            "([{lemma:/[Hh]ow/; tag:/W.*/}] | /[Ww]hat/ [{lemma:be}] /ways?/ (?$prp0 [{tag:/PRP.?/} | {word:i}]) ) " +
+            "([{lemma:/[Hh]ow/; posTagger:/W.*/}] | /[Ww]hat/ [{lemma:be}] /ways?/ (?$prp0 [{posTagger:/PRP.?/} | {word:i}]) ) " +
                     "((?$do [ {lemma:/do/} | {lemma:can}]) | (?$jj [ {pos:JJ} ]{0,3}) (?$be [ {lemma:be} ])) " +
-                    "(?$prp1 [{tag:/PRP.?/} | {word:i}])? " +
+                    "(?$prp1 [{posTagger:/PRP.?/} | {word:i}])? " +
                     "(?$statement_body []+?) " +
                     "(?$punct [word:/[?\\.!]/])" );
 
@@ -1001,7 +1001,7 @@ public class QuestionToStatementTranslator {
      * The pattern for "how much...do..."  sentences.
      */
     private final TokenSequencePattern triggerHowMuchDo = TokenSequencePattern.compile(
-            "[{lemma:/[Hh]ow/; tag:/W.*/}] " +
+            "[{lemma:/[Hh]ow/; posTagger:/W.*/}] " +
                     "(much | many) [{pos:NN}]{0,10} " +
                     "((?$do [ {lemma:/do/} | {lemma:can}]) | (?$jj [ {pos:JJ} ]) (?$be [ {lemma:be} ])) " +
                     "(?$prefix [!{lemma:to}]{1,25}) " +

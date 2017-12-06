@@ -100,9 +100,9 @@ public class OpenIEParser {
         return extract2Instance(sentence).stream().map(ArgumentPhrase::new).collect(Collectors.toList());
     }
 
-    public List<Instance> extract2InstanceUseTriples (String sentence) { return extract2Instance(sentence, true); }
+    private List<Instance> extract2InstanceUseTriples(String sentence) { return extract2Instance(sentence, true); }
 
-    public List<Instance> extract2Instance (String sentence) { return extract2Instance(sentence, false); }
+    private List<Instance> extract2Instance(String sentence) { return extract2Instance(sentence, false); }
 
     /** @return a list of {@link Instance} extracted by OpenIE (argument1-relation-argument2s) */
     private List<Instance> extract2Instance (String sentence, boolean useTriples) {
