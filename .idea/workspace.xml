@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a97f4f96-fa98-49ab-b4fb-926ebb958e20" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
@@ -16,7 +15,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="30">
+                <caret line="2" column="471" lean-forward="false" selection-start-line="2" selection-start-column="471" selection-end-line="2" selection-end-column="471" />
+                <folding>
+                  <marker date="1514434346543" expanded="true" signature="3993:5836" ph="{...}" />
+                  <marker date="1514434346543" expanded="true" signature="5354:5452" ph="//..." />
+                  <marker date="1514434346543" expanded="true" signature="7910:8995" ph="{...}" />
+                  <marker date="1514434346543" expanded="true" signature="9795:10502" ph="{...}" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -458,7 +476,7 @@
       <workItem from="1512370227653" duration="4300000" />
       <workItem from="1512470968666" duration="12719000" />
       <workItem from="1513326606493" duration="1065000" />
-      <workItem from="1514434243495" duration="50000" />
+      <workItem from="1514434243495" duration="103000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1512207017983</created>
@@ -474,11 +492,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512541666515</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update README.md">
+      <created>1514434302565</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1514434302565</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36476000" />
+    <option name="totallyTimeSpent" value="36529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="22" width="1395" height="878" extended-state="0" />
@@ -523,7 +548,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <MESSAGE value="reconstruct CoreNLP Parser, update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="reconstruct CoreNLP Parser, update README.md" />
+    <MESSAGE value="update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -729,16 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="220">
-            <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3104">
@@ -748,6 +764,22 @@
             <element signature="e#3117#3118#0" expanded="false" />
             <element signature="e#3197#3198#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="471" lean-forward="false" selection-start-line="2" selection-start-column="471" selection-end-line="2" selection-end-column="471" />
+            <folding>
+              <marker date="1514434346543" expanded="true" signature="3993:5836" ph="{...}" />
+              <marker date="1514434346543" expanded="true" signature="5354:5452" ph="//..." />
+              <marker date="1514434346543" expanded="true" signature="7910:8995" ph="{...}" />
+              <marker date="1514434346543" expanded="true" signature="9795:10502" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
