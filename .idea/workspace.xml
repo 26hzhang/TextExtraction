@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a97f4f96-fa98-49ab-b4fb-926ebb958e20" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/zhanghao.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/experiment/QuestionToStatementTranslator.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/experiment/QuestionToStatementTranslator.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/ling/NERType.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/ling/NERType.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/ConceptNetParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/ConceptNetParser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenIEParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/nlp/OpenIEParser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isaac/utils/Common.java" afterPath="$PROJECT_DIR$/src/main/java/com/isaac/utils/Common.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/CorefExample.java" afterPath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/CorefExample.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/NameEntityRecogExample.java" afterPath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/NameEntityRecogExample.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/StanfordCoreNLPExample.java" afterPath="$PROJECT_DIR$/src/test/java/com/isaac/example/corenlp/StanfordCoreNLPExample.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/experiment/QuestionToStatementTranslator.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/experiment/QuestionToStatementTranslator.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/ling/NERType.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/ling/NERType.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/nlp/CoreNLPParser$1.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/nlp/CoreNLPParser$1.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/nlp/CoreNLPParser.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/nlp/CoreNLPParser.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenIEParser.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenIEParser.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenNLPParser.class" afterPath="$PROJECT_DIR$/target/classes/com/isaac/nlp/OpenNLPParser.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/CorefExample.class" afterPath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/CorefExample.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/NameEntityRecogExample.class" afterPath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/NameEntityRecogExample.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/StanfordCoreNLPExample.class" afterPath="$PROJECT_DIR$/target/test-classes/com/isaac/example/corenlp/StanfordCoreNLPExample.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,26 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="253">
-                <caret line="105" column="26" lean-forward="false" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="26" />
-                <folding>
-                  <marker date="1512541625636" expanded="true" signature="3519:5362" ph="{...}" />
-                  <marker date="1512541625636" expanded="true" signature="4880:4978" ph="//..." />
-                  <marker date="1512541625636" expanded="true" signature="7436:8521" ph="{...}" />
-                  <marker date="1512541625636" expanded="true" signature="9321:10028" ph="{...}" />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,6 +27,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -142,7 +106,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,6 +200,7 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -492,7 +456,9 @@
       <workItem from="1512040822721" duration="71000" />
       <workItem from="1512192469593" duration="2447000" />
       <workItem from="1512370227653" duration="4300000" />
-      <workItem from="1512470968666" duration="12558000" />
+      <workItem from="1512470968666" duration="12719000" />
+      <workItem from="1513326606493" duration="1065000" />
+      <workItem from="1514434243495" duration="50000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1512207017983</created>
@@ -501,31 +467,37 @@
       <option name="project" value="LOCAL" />
       <updated>1512207017983</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="reconstruct CoreNLP Parser, update README.md">
+      <created>1512541666515</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1512541666515</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35200000" />
+    <option name="totallyTimeSpent" value="36476000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="22" width="1395" height="878" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.50258684" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32950193" sideWeight="0.49741316" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.49741316" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20694752" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21286032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -537,7 +509,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +522,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="reconstruct CoreNLP Parser, update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="reconstruct CoreNLP Parser, update README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -560,9 +535,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3117#3118#0" expanded="true" />
-            <element signature="e#3197#3198#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3117#3118#0" expanded="false" />
+            <element signature="e#3197#3198#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -580,7 +555,7 @@
         <state relative-caret-position="570">
           <caret line="38" column="67" lean-forward="true" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
           <folding>
-            <element signature="e#521#548#0" expanded="true" />
+            <element signature="e#521#548#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -651,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,7 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="43" column="63" lean-forward="false" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -675,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="893" column="13" lean-forward="true" selection-start-line="893" selection-start-column="0" selection-end-line="894" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,9 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="37" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,19 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-924">
-          <caret line="53" column="95" lean-forward="true" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3117#3118#0" expanded="true" />
-            <element signature="e#3197#3198#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -729,7 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="21" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +693,7 @@
         <state relative-caret-position="-437">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#521#548#0" expanded="true" />
+            <element signature="e#521#548#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -755,7 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -778,16 +732,22 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="253">
-            <caret line="105" column="26" lean-forward="false" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="26" />
-            <folding>
-              <marker date="1512541625636" expanded="true" signature="3519:5362" ph="{...}" />
-              <marker date="1512541625636" expanded="true" signature="4880:4978" ph="//..." />
-              <marker date="1512541625636" expanded="true" signature="7436:8521" ph="{...}" />
-              <marker date="1512541625636" expanded="true" signature="9321:10028" ph="{...}" />
-            </folding>
+          <first_editor relative-caret-position="220">
+            <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/isaac/nlp/CoreNLPParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3104">
+          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3117#3118#0" expanded="false" />
+            <element signature="e#3197#3198#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

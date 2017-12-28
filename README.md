@@ -1,6 +1,6 @@
 # Text Extraction
 
-![Authour](https://img.shields.io/badge/Author-Zhang%20Hao%20(Isaac%20Changhau)-blue.svg)
+![Authour](https://img.shields.io/badge/Author-Zhang%20Hao%20(Isaac%20Changhau)-blue.svg) ![](https://img.shields.io/badge/Java-1.8-brightgreen.svg) ![](https://img.shields.io/badge/WordNet-3.1-brightgreen.svg) ![](https://img.shields.io/badge/StanfordCoreNLP-3.8.0-yellowgreen.svg) ![](https://img.shields.io/badge/OpenNLP-1.8.3-yellowgreen.svg) ![](https://img.shields.io/badge/OpenIE-4.2.1-yellowgreen.svg) ![](https://img.shields.io/badge/ClausIE-1.0-yellowgreen.svg) ![](https://img.shields.io/badge/WordNetJWI-2.2.3-yellowgreen.svg)
 
 It is a wrapper and combiner of [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/), [OpenNLP](https://opennlp.apache.org/), [OpenIE](http://openie.allenai.org/), [ClausIE](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/software/clausie/), [WordNet](https://wordnet.princeton.edu/) and [ConceptNet API](https://github.com/commonsense/conceptnet5/wiki/API) to make those tools easily to use for tackling some NLP tasks, like **Named Entity Recognition**, **POS Tagging**, **Chunking**, **Information Extraction**, **Dependency Parising**, **Concept Extraction** and etc.
 
