@@ -8,7 +8,7 @@ import java.util.List;
 
 public class OpenNLPExample {
     public static void main (String[] args) {
-        String singleSent = "Most large cities in the US had morning and afternoon newspapers, but New York doesn't have on Thursday, Stanford University locates in ";
+        String singleSent = "Most large cities in the US had morning and afternoon newspapers, but New York doesn't have on Thursday, Stanford University locates in California.";
         String paragraph = FileUtils.readNthParagraph("paragraphs.txt", 2);
         System.err.println("Create OpenNLP Parser...");
         OpenNLPParser opennlp = new OpenNLPParser();

@@ -44,9 +44,8 @@ public class FileUtils {
     /** @return {@link List} of stopwords */
     private static List<String> readStopWords (String filename) {
         List<String> stopwords = new ArrayList<>();
-        try {
-            stopwords = Files.readAllLines(Paths.get(STOPWORDS_DIRECTORY.concat(filename)), Charset.defaultCharset());
-        } catch (IOException e) { e.printStackTrace(); }
+        try { stopwords = Files.readAllLines(Paths.get(STOPWORDS_DIRECTORY.concat(filename)), Charset.defaultCharset()); }
+        catch (IOException e) { e.printStackTrace(); }
         return stopwords.stream().map(String::trim).collect(Collectors.toList()); // cleanup unused space
     }
 

@@ -241,7 +241,7 @@ public class CoreNLPParser {
         return nerDetector.classifyWithInlineXML(sentences);
     }
 
-    /*public String detectNER2String (AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
+    public String detectNER2String (AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
         return nerDetector.classifyToString(sentences);
     }
     public String detectNER2XMLString (AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
@@ -257,14 +257,14 @@ public class CoreNLPParser {
         return nerDetector.classifyToString(sentence, "slashTags", false);
     }
     /** @return {@link List} of {@link Triple}, detect specific entities */
-    /*public List<Triple<String, Integer, Integer>> detectNER2CharacterOffsets (
-                                    AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
+    public List<Triple<String, Integer, Integer>> detectNER2CharacterOffsets (AbstractSequenceClassifier<CoreLabel> nerDetector,
+                                                                              String sentence) {
         return nerDetector.classifyToCharacterOffsets(sentence);
     }
     /** detect specific entity to core label lists */
-    /*public List<List<CoreLabel>> detectNER2CoreLabel (AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
+    public List<List<CoreLabel>> detectNER2CoreLabel (AbstractSequenceClassifier<CoreLabel> nerDetector, String sentence) {
         return nerDetector.classify(sentence);
-    }*/
+    }
     /*------------------------------------------------------------------*/
 
     /*----------------------- Getters and Setters ----------------------*/

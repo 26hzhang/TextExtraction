@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class Query2StatementExample {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         StanfordCoreNLP pipeline = new StanfordCoreNLP(PropertiesUtils.asProperties("annotators", "tokenize,ssplit,pos,lemma"));
         QuestionToStatementTranslator translator = new QuestionToStatementTranslator();
         String question = "Where is the apple?";

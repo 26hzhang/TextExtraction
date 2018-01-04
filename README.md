@@ -85,9 +85,80 @@ public class StanfordCoreNLPExample {
 Moreover, for [`dependency parsing`](https://nlp.stanford.edu/software/stanford-dependencies.shtml), [`anaphora (coreference) resolution]`](https://stanfordnlp.github.io/CoreNLP/coref.html) and other useful functions, see details in the codes.
 
 ### Apache OpenNLP and UW OpenIE Parser
-**Apache OpenNLP Parser**: _TODO_
+**Apache OpenNLP Parser**:
+```java
+public class OpenNLPExample {
+    public static void main (String[] args) {
+        String singleSent = "Most large cities in the US had morning and afternoon newspapers, but New York doesn't have on Thursday, Stanford University locates in California.";
+        String paragraph = FileUtils.readNthParagraph("paragraphs.txt", 2);
+        System.err.println("Create OpenNLP Parser...");
+        OpenNLPParser opennlp = new OpenNLPParser();
+        System.err.println("Done...");
+        // Name Entity detection
+        List<String> persons = opennlp.findPerson(singleSent);
+        System.out.println("Persons: " + persons);
+        List<String> dates = opennlp.findDate(singleSent);
+        System.out.println("Dates: " + dates);
+        List<String> times = opennlp.findTime(singleSent);
+        System.out.println("Time: " + times);
+        List<String> locations = opennlp.findLocation(singleSent);
+        System.out.println("Locations: " + locations);
+        List<String> organizations = opennlp.findOrganization(singleSent);
+        System.out.println("Organization: " + organizations);
+        // Tokenize, pos tagging, chunking
+        List<String> sentences = opennlp.sentenceTokenize(paragraph); // segment paragraph into sentences
+        for (String sentence : sentences) {
+            List<String> tokens = opennlp.tokenize(sentence);
+            List<String> tags = opennlp.tag(sentence);
+            List<String> chunks = opennlp.chunk(sentence);
+            for (int i = 0; i < tokens.size(); i++)
+                System.out.println(tokens.get(i) + "\t" + tags.get(i) + "\t" + chunks.get(i));
+            List<ChunkedPhrase> chunkedPhrases = opennlp.chunkedPhrases(sentence);
+            chunkedPhrases.forEach(System.out::println);
+        }
+    }
+}
+```
 
-**UW OpenIE Parser**: _TODO_
+**UW OpenIE Parser**:
+```java
+public class OpenIEExample {
+    public static void main (String[] args) {
+        String singleSent = "The U.S. president Barack Obama gave his speech on Tuesday at White House to thousands of people";
+        System.err.println("Create OpenIE Parser...");
+        OpenIEParser openie = new OpenIEParser();
+        System.err.println("Done...");
+        List<Token> tokens = openie.tokenize(singleSent);
+        System.out.println(tokens);
+        List<String> tokensStr = openie.tokenize2String(singleSent);
+        System.out.println(tokensStr);
+        List<PostaggedToken> tags = openie.posTag(singleSent);
+        System.out.println(tags);
+        List<String> tagsStr = openie.posTag2String(singleSent);
+        System.out.println(tagsStr);
+        List<ChunkedToken> chunks = openie.chunk(singleSent);
+        System.out.println(chunks);
+        List<String> chunksStr = openie.chunk2String(singleSent);
+        System.out.println(chunksStr);
+        List<ChunkedPhrase> chunkedPhrases = openie.getChunkedPhrases(singleSent);
+        List<String> list = chunkedPhrases.stream().map(ChunkedPhrase::toString).collect(Collectors.toList());
+        System.out.println(String.join(", ", list).concat("\n"));
+        // Extract information
+        System.err.println("Information Extraction Demo...");
+        String paragraph = FileUtils.readNthParagraph("paragraphs.txt", 3);
+        List<String> sentences = openie.sentenceTokenize(paragraph);
+        for (String sentence : sentences) {
+            List<ArgumentPhrase> argumentPhrases = openie.extract(sentence);
+            argumentPhrases.forEach(arg -> System.out.println(arg.toString()));
+            System.out.println();
+            List<ChunkedPhrase> chunked = openie.getChunkedPhrases(sentence);
+            chunked.forEach(c -> System.out.println(c.toString()));
+            List<POSTagPhrase> posTagPhrases = openie.getPosTagPhrases(sentence);
+            System.out.println("\n" + posTagPhrases.toString());
+        }
+    }
+}
+```
 
 ### ConceptNet and ClausIE Parser
 **ConceptNet Parser**: it is a simple _http_ requester and component extractor, which send request to conceptnet api and got response (JSON format data), then using [Gson](https://github.com/google/gson) to extract useful information and store in `ConceptPhrase` (includes, _entity1-relation-entity2_, _weight_, _example_).
