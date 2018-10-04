@@ -82,7 +82,7 @@ public class StanfordCoreNLPExample {
     }
 }
 ```
-Moreover, for [`dependency parsing`](https://nlp.stanford.edu/software/stanford-dependencies.shtml), [`anaphora (coreference) resolution]`](https://stanfordnlp.github.io/CoreNLP/coref.html) and other useful functions, see details in the codes.
+Moreover, for [`dependency parsing`](https://nlp.stanford.edu/software/stanford-dependencies.shtml), [`anaphora (coreference) resolution](https://stanfordnlp.github.io/CoreNLP/coref.html) and other useful functions, see details in the codes.
 
 ### Apache OpenNLP and UW OpenIE Parser
 **Apache OpenNLP Parser**:
